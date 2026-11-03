@@ -1,0 +1,93 @@
+import type {
+  AuditRecord,
+  CourseTerm,
+  Enrollment,
+  GuardianLink,
+  TeachingAssignment,
+} from "@/lib/types";
+
+export const courseTerms: CourseTerm[] = [
+  { id: "t-601-25", courseId: "c-601", yearId: "year-2025", directorId: "u-doc-1", jornada: "MAÑANA", capacity: 36 },
+  { id: "t-701-25", courseId: "c-701", yearId: "year-2025", directorId: "u-doc-2", jornada: "MAÑANA", capacity: 38 },
+  { id: "t-1101-25", courseId: "c-1101", yearId: "year-2025", directorId: "u-doc-4", jornada: "TARDE", capacity: 34 },
+  { id: "t-601-26", courseId: "c-601", yearId: "year-2026", directorId: "u-doc-1", jornada: "MAÑANA", capacity: 38 },
+  { id: "t-602-26", courseId: "c-602", yearId: "year-2026", directorId: "u-doc-2", jornada: "TARDE", capacity: 36 },
+  { id: "t-701-26", courseId: "c-701", yearId: "year-2026", directorId: "u-doc-3", jornada: "MAÑANA", capacity: 40 },
+  { id: "t-702-26", courseId: "c-702", yearId: "year-2026", directorId: "u-coord-2", jornada: "TARDE", capacity: 35 },
+  { id: "t-801-26", courseId: "c-801", yearId: "year-2026", directorId: "u-doc-4", jornada: "MAÑANA", capacity: 37 },
+  { id: "t-901-26", courseId: "c-901", yearId: "year-2026", directorId: "u-doc-5", jornada: "MAÑANA", capacity: 36 },
+  { id: "t-1001-26", courseId: "c-1001", yearId: "year-2026", directorId: "u-doc-1", jornada: "TARDE", capacity: 34 },
+  { id: "t-1002-26", courseId: "c-1002", yearId: "year-2026", directorId: "u-doc-3", jornada: "MAÑANA", capacity: 35 },
+  { id: "t-1101-26", courseId: "c-1101", yearId: "year-2026", directorId: "u-doc-4", jornada: "MAÑANA", capacity: 32 },
+  { id: "t-1102-26", courseId: "c-1102", yearId: "year-2026", directorId: "u-doc-5", jornada: "TARDE", capacity: 30 },
+];
+
+export const enrollments: Enrollment[] = [
+  { id: "e-01", studentId: "s-01", courseTermId: "t-601-26" },
+  { id: "e-02", studentId: "s-02", courseTermId: "t-701-26" },
+  { id: "e-03", studentId: "s-03", courseTermId: "t-601-26" },
+  { id: "e-04", studentId: "s-04", courseTermId: "t-801-26" },
+  { id: "e-05", studentId: "s-05", courseTermId: "t-602-26" },
+  { id: "e-06", studentId: "s-06", courseTermId: "t-701-26" },
+  { id: "e-07", studentId: "s-07", courseTermId: "t-901-26" },
+  { id: "e-08", studentId: "s-08", courseTermId: "t-1001-26" },
+  { id: "e-09", studentId: "s-09", courseTermId: "t-1002-26" },
+  { id: "e-10", studentId: "s-10", courseTermId: "t-801-26" },
+  { id: "e-11", studentId: "s-11", courseTermId: "t-901-26" },
+  { id: "e-12", studentId: "s-12", courseTermId: "t-702-26" },
+  { id: "e-13", studentId: "s-13", courseTermId: "t-1101-26" },
+  { id: "e-14", studentId: "s-14", courseTermId: "t-1101-26" },
+  { id: "e-15", studentId: "s-15", courseTermId: "t-1102-26" },
+  { id: "e-16", studentId: "s-16", courseTermId: "t-602-26" },
+  { id: "e-17", studentId: "s-17", courseTermId: "t-1102-26" },
+  { id: "e-18", studentId: "s-18", courseTermId: "t-1001-26" },
+  { id: "e-19", studentId: "s-19", courseTermId: "t-1002-26" },
+  { id: "e-20", studentId: "s-20", courseTermId: "t-1101-26" },
+];
+
+export const assignments: TeachingAssignment[] = [
+  { id: "a-01", teacherId: "u-doc-1", courseTermId: "t-601-26", subject: "Matemáticas" },
+  { id: "a-02", teacherId: "u-doc-1", courseTermId: "t-1001-26", subject: "Matemáticas" },
+  { id: "a-03", teacherId: "u-doc-2", courseTermId: "t-602-26", subject: "Lengua Castellana" },
+  { id: "a-04", teacherId: "u-doc-2", courseTermId: "t-801-26", subject: "Lengua Castellana" },
+  { id: "a-05", teacherId: "u-doc-3", courseTermId: "t-701-26", subject: "Ciencias Naturales" },
+  { id: "a-06", teacherId: "u-doc-3", courseTermId: "t-1002-26", subject: "Física" },
+  { id: "a-07", teacherId: "u-doc-4", courseTermId: "t-801-26", subject: "Ciencias Sociales" },
+  { id: "a-08", teacherId: "u-doc-4", courseTermId: "t-1101-26", subject: "Filosofía" },
+  { id: "a-09", teacherId: "u-doc-5", courseTermId: "t-901-26", subject: "Inglés" },
+  { id: "a-10", teacherId: "u-doc-5", courseTermId: "t-1102-26", subject: "Inglés" },
+  { id: "a-11", teacherId: "u-coord-2", courseTermId: "t-702-26", subject: "Ética y valores" },
+];
+
+export const guardianLinks: GuardianLink[] = [
+  { id: "v-01", guardianId: "u-acu-1", studentId: "s-01", parentesco: "Madre" },
+  { id: "v-02", guardianId: "u-acu-1", studentId: "s-02", parentesco: "Madre" },
+  { id: "v-03", guardianId: "u-acu-2", studentId: "s-03", parentesco: "Padre" },
+  { id: "v-04", guardianId: "u-acu-3", studentId: "s-04", parentesco: "Madre" },
+  { id: "v-05", guardianId: "u-acu-2", studentId: "s-16", parentesco: "Tío" },
+  { id: "v-06", guardianId: "u-acu-3", studentId: "s-12", parentesco: "Tía" },
+  { id: "v-07", guardianId: "u-acu-1", studentId: "s-20", parentesco: "Abuela" },
+];
+
+export const auditRecords: AuditRecord[] = [
+  { id: "aud-01", date: "2026-09-05T08:12:00-05:00", userId: "u-admin", action: "Inició sesión", entity: "Sesión", entityId: "ses-901", ip: "181.49.12.44" },
+  { id: "aud-02", date: "2026-09-05T08:18:22-05:00", userId: "u-admin", action: "Creó usuario", entity: "Usuario", entityId: "u-doc-5", ip: "181.49.12.44" },
+  { id: "aud-03", date: "2026-09-04T16:41:10-05:00", userId: "u-coord-1", action: "Matriculó estudiante", entity: "Matrícula", entityId: "e-20", ip: "186.155.88.19" },
+  { id: "aud-04", date: "2026-09-04T15:03:47-05:00", userId: "u-coord-2", action: "Asignó docente", entity: "Asignación", entityId: "a-11", ip: "186.155.88.21" },
+  { id: "aud-05", date: "2026-09-04T11:22:05-05:00", userId: "u-admin", action: "Actualizó permisos", entity: "Rol", entityId: "COORDINADOR", ip: "181.49.12.44" },
+  { id: "aud-06", date: "2026-09-03T09:55:33-05:00", userId: "u-rector", action: "Consultó auditoría", entity: "Auditoría", entityId: "filtro-2026", ip: "190.27.64.102" },
+  { id: "aud-07", date: "2026-09-03T09:12:18-05:00", userId: "u-coord-1", action: "Editó vigencia de curso", entity: "Vigencia", entityId: "t-601-26", ip: "186.155.88.19" },
+  { id: "aud-08", date: "2026-09-02T14:40:00-05:00", userId: "u-admin", action: "Carga masiva CSV", entity: "Importación", entityId: "csv-14", ip: "181.49.12.44" },
+  { id: "aud-09", date: "2026-09-02T10:08:51-05:00", userId: "u-soporte", action: "Desactivó usuario", entity: "Usuario", entityId: "u-inactivo", ip: "181.49.12.51" },
+  { id: "aud-10", date: "2026-09-01T17:26:09-05:00", userId: "u-admin", action: "Bloqueó usuario", entity: "Usuario", entityId: "u-bloqueado", ip: "181.49.12.44" },
+  { id: "aud-11", date: "2026-08-29T08:33:40-05:00", userId: "u-coord-2", action: "Creó vínculo acudiente", entity: "Vínculo", entityId: "v-07", ip: "186.155.88.21" },
+  { id: "aud-12", date: "2026-08-28T13:15:27-05:00", userId: "u-doc-1", action: "Consultó listado de curso", entity: "Curso", entityId: "t-601-26", ip: "191.95.22.77" },
+  { id: "aud-13", date: "2026-08-27T09:47:12-05:00", userId: "u-psico", action: "Consultó ficha estudiantil", entity: "Estudiante", entityId: "s-04", ip: "186.29.110.8" },
+  { id: "aud-14", date: "2026-08-26T16:02:55-05:00", userId: "u-coord-1", action: "Creó curso", entity: "Curso", entityId: "c-1102", ip: "186.155.88.19" },
+  { id: "aud-15", date: "2026-08-25T11:19:04-05:00", userId: "u-admin", action: "Asignó rol", entity: "Usuario", entityId: "u-coord-2", ip: "181.49.12.44" },
+  { id: "aud-16", date: "2026-08-22T08:05:31-05:00", userId: "u-rector", action: "Consultó usuarios", entity: "Usuario", entityId: "directorio", ip: "190.27.64.102" },
+  { id: "aud-17", date: "2026-08-21T15:44:18-05:00", userId: "u-acu-1", action: "Inició sesión", entity: "Sesión", entityId: "ses-774", ip: "181.51.203.16" },
+  { id: "aud-18", date: "2026-08-20T10:27:49-05:00", userId: "u-soporte", action: "Descargó plantilla CSV", entity: "Importación", entityId: "plantilla", ip: "181.49.12.51" },
+  { id: "aud-19", date: "2026-08-19T09:11:02-05:00", userId: "u-coord-1", action: "Matriculó estudiante", entity: "Matrícula", entityId: "e-13", ip: "186.155.88.19" },
+  { id: "aud-20", date: "2026-08-18T14:58:36-05:00", userId: "u-admin", action: "Actualizó año lectivo", entity: "Año lectivo", entityId: "year-2026", ip: "181.49.12.44" },
+];
